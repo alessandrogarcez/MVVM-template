@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___ViewController: UIViewController {
+class ___VARIABLE_sceneName___ViewController: UITableViewController {
 
     var interactor: ___VARIABLE_sceneName___Interactor?
 
@@ -26,11 +26,22 @@ class ___VARIABLE_sceneName___ViewController: UIViewController {
 
 //MARK: - ___VARIABLE_sceneName___InteractorDelegate
 extension ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___InteractorDelegate {
-
+    
     func reloadViewState() {
         
     }
-
+    
 }
 
-
+//MARK: - UITableViewDataSource and UITableViewDelegate
+extension ___VARIABLE_sceneName___ViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+}

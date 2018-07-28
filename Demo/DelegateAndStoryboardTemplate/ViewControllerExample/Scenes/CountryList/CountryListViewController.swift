@@ -8,6 +8,9 @@
 
 import UIKit
 
+private var cellIdentifier: String { return "UITableViewCell" }
+private var sceneTitle: String { return "Countries" }
+
 class CountryListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
@@ -21,8 +24,8 @@ class CountryListViewController: UIViewController {
     }
 
     private func setup(){
-        title = "Countries"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        title = sceneTitle
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
     }
 
@@ -40,7 +43,7 @@ extension CountryListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else {
             return UITableViewCell()
         }
         
