@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ___VARIABLE_sceneName___Configurator: NSObject{
+class ___VARIABLE_sceneName___Configurator: NSObject {
 
-    @IBOutlet weak var viewController: ___VARIABLE_sceneName___ViewController!
+    @IBOutlet weak var viewController: ___VARIABLE_sceneName___ViewController?
 
     override func awakeFromNib(){
         super.awakeFromNib()
         let interactor = ___VARIABLE_sceneName___Interactor()
-        viewController.interactor = interactor
+        viewController?.interactor = interactor
         interactor.delegate = viewController
 
         let router = ___VARIABLE_sceneName___Router()

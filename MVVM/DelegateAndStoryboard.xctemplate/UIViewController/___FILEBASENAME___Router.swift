@@ -14,10 +14,10 @@ protocol ___VARIABLE_sceneName___RouterInput {
 
 class ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterInput {
 
-    weak var viewController: ___VARIABLE_sceneName___ViewController!
+    weak var viewController: ___VARIABLE_sceneName___ViewController?
 
     func goToPreviousScreen(){
-        viewController.navigationController?.popViewController(animated: true)
+        viewController?.navigationController?.popViewController(animated: true)
     }
 
 }

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>DefaultCompletionName</key>
-	<string>MyScene</string>
+	<string>DelegateAndStoryboard</string>
 	<key>Description</key>
-	<string>This generates a new scene using Uncle Bob&apos;s clean architecture. It consists of the view controller, interactor, presenter, and router. You can then create individual workers to supplement the interactor.</string>
+	<string>This generates a new scene using MVVM architeture.</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>Options</key>
@@ -90,6 +90,20 @@
 		</dict>
 		<dict>
 			<key>Default</key>
+			<string>___VARIABLE_sceneName:identifier___Definitions</string>
+			<key>Description</key>
+			<string>The definitions file name</string>
+			<key>Identifier</key>
+			<string>definitionsName</string>
+			<key>Name</key>
+			<string>Definitions Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
 			<string>UIViewController</string>
 			<key>Description</key>
 			<string>What view controller class to subclass for the new scene</string>
@@ -118,6 +132,6 @@
 	<key>SortOrder</key>
 	<string>0</string>
 	<key>Summary</key>
-	<string>This generates a new scene using Uncle Bob&apos;s clean architecture.</string>
+	<string>This generates a new scene of the delegate and storyboard based templarte MVVM architeture.</string>
 </dict>
 </plist>

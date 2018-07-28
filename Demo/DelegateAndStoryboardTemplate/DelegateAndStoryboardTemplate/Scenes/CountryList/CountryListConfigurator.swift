@@ -10,12 +10,12 @@ import Foundation
 
 class CountryListConfigurator: NSObject{
 
-    @IBOutlet weak var viewController: CountryListViewController!
+    @IBOutlet weak var viewController: CountryListViewController?
 
     override func awakeFromNib(){
         super.awakeFromNib()
         let interactor = CountryListInteractor()
-        viewController.interactor = interactor
+        viewController?.interactor = interactor
         interactor.delegate = viewController
 
         let router = CountryListRouter()
