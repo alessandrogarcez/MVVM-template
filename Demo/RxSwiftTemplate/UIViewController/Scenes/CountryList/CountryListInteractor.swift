@@ -7,16 +7,14 @@
 //
 
 import Foundation
-
-protocol CountryListInteractorDelegate: class {
-    func reloadViewState()
-}
+import RxSwift
 
 class CountryListInteractor {
 
-    weak var delegate: CountryListInteractorDelegate?
     var router: CountryListRouterInput?
 
-    func provideInitialState(){}
+    func provideInitialState() {
+        
+    }
 
 }

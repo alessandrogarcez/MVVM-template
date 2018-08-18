@@ -17,8 +17,8 @@
 		168E7886210CBF8B002F91D4 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E7881210CBF8B002F91D4 /* CountryListRouter.swift */; };
 		168E7887210CBF8B002F91D4 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E7882210CBF8B002F91D4 /* CountryListViewController.swift */; };
 		168E7888210CBF8B002F91D4 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E7883210CBF8B002F91D4 /* CountryListInteractor.swift */; };
-		168E7889210CBF8B002F91D4 /* CountryListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E7884210CBF8B002F91D4 /* CountryListConfigurator.swift */; };
 		168E788A210CBF8B002F91D4 /* CountryListDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E7885210CBF8B002F91D4 /* CountryListDefinitions.swift */; };
+		168E7892210CC515002F91D4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168E7891210CC515002F91D4 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		168E7881210CBF8B002F91D4 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
 		168E7882210CBF8B002F91D4 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		168E7883210CBF8B002F91D4 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
-		168E7884210CBF8B002F91D4 /* CountryListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListConfigurator.swift; sourceTree = "<group>"; };
 		168E7885210CBF8B002F91D4 /* CountryListDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListDefinitions.swift; sourceTree = "<group>"; };
+		168E7891210CC515002F91D4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168E7892210CC515002F91D4 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +53,7 @@
 		16145621210CBE8800D6D8CE = {
 			isa = PBXGroup;
 			children = (
+				168E788E210CC4C0002F91D4 /* Frameworks */,
 				168E7876210CBEFE002F91D4 /* Assets */,
 				168E7873210CBEFE002F91D4 /* Server */,
 				1614562C210CBE8800D6D8CE /* UIViewController */,
@@ -127,10 +129,17 @@
 				168E7881210CBF8B002F91D4 /* CountryListRouter.swift */,
 				168E7882210CBF8B002F91D4 /* CountryListViewController.swift */,
 				168E7883210CBF8B002F91D4 /* CountryListInteractor.swift */,
-				168E7884210CBF8B002F91D4 /* CountryListConfigurator.swift */,
 				168E7885210CBF8B002F91D4 /* CountryListDefinitions.swift */,
 			);
 			path = CountryList;
+			sourceTree = "<group>";
+		};
+		168E788E210CC4C0002F91D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				168E7891210CC515002F91D4 /* RxSwift.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +152,7 @@
 				16145626210CBE8800D6D8CE /* Sources */,
 				16145627210CBE8800D6D8CE /* Frameworks */,
 				16145628210CBE8800D6D8CE /* Resources */,
+				168E7893210CC5C0002F91D4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -200,6 +210,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		168E7893210CC5C0002F91D4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Frameworks/RxSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16145626210CBE8800D6D8CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -209,7 +237,6 @@
 				168E7888210CBF8B002F91D4 /* CountryListInteractor.swift in Sources */,
 				168E7887210CBF8B002F91D4 /* CountryListViewController.swift in Sources */,
 				168E788A210CBF8B002F91D4 /* CountryListDefinitions.swift in Sources */,
-				168E7889210CBF8B002F91D4 /* CountryListConfigurator.swift in Sources */,
 				168E7879210CBEFE002F91D4 /* DataServerLocal.swift in Sources */,
 				1614562E210CBE8800D6D8CE /* AppDelegate.swift in Sources */,
 				168E7886210CBF8B002F91D4 /* CountryListRouter.swift in Sources */,
@@ -357,6 +384,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIViewController/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +406,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UIViewController/Assets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
