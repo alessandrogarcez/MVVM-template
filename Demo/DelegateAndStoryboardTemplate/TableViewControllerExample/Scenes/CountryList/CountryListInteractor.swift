@@ -17,6 +17,13 @@ class CountryListInteractor {
     weak var delegate: CountryListInteractorDelegate?
     var router: CountryListRouterInput?
 
-    func provideInitialState(){}
+    private(set) var countries: [CountryListModule.Country] = []
+    
+    func provideInitialState(){
+        DataServerLocal.listCountries { countries in
+            self.countries = countries
+            delegate?.reloadViewState()
+        }
+    }
 
 }
